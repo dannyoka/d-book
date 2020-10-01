@@ -6,10 +6,12 @@ import data from "../data.json";
 const App = () => {
   const [term, setTerm] = useState("");
   return (
-    <React.Fragment>
-      <Input onTermChange={setTerm} />
-      <List data={data} term={term} />
-    </React.Fragment>
+    <div className="container">
+      <React.Fragment>
+        <Input onTermChange={setTerm} />
+        <List data={data} term={term} />
+      </React.Fragment>
+    </div>
   );
 };
 

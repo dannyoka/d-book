@@ -11,6 +11,7 @@ const Input = ({ onTermChange }) => {
           onTermChange(input);
           setInput("");
         }}
+        className="form-group"
       >
         <input
           type="text"
@@ -18,8 +19,9 @@ const Input = ({ onTermChange }) => {
           onChange={(e) => {
             setInput(e.target.value);
           }}
+          className="form-group"
         />
-        <input type="submit" />
+        <input type="submit" className="btn btn-primary" />
       </form>
     </div>
   );
