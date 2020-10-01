@@ -19,7 +19,7 @@ const List = (props) => {
     }
   };
 
-  const newList = (limit) => {
+  const limitedList = (limit) => {
     let i = 0;
     let myList = [];
     while (i < limit) {
@@ -58,7 +58,7 @@ const List = (props) => {
 
   return (
     <div>
-      <ul className="list-group">{newList(limit)}</ul>
+      <ul className="list-group">{limitedList(limit)}</ul>
       <p>Total number of items: {numberOfItems}</p>
       {renderButton()}
     </div>
