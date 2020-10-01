@@ -9,3 +9,5 @@ Having finished that, I began on pagination. To accomplish this, I wrote a limit
 Then, I have a function called renderButton() which checks if the total number of items in the props.data is greater than the limit, and if so, it renders a button that says Load More, and if clicked, it will use the setLimit() function to change the limit to be equal to the total dataset and thus render all items in our data, rather than just a limited portion. The renderButton() also checks if the limit === numberOfItems, and if it does it displays a "Show Less" button, which if clicked reduces the limit back down to 5.
 
 I believe that most of these components are pretty reusable. If I were to have more time, I might pull the Load More button out of the List component. I would also make my limitedList function take in both limit and list as a parameter to make it more reusable rather than hard code in which list it's using.
+
+Oh! And about halfway through the project, I added in Bootstrap because the default styling was very ugly.
