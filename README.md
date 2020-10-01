@@ -2,13 +2,6 @@ About my project:
 
 I used a pretty straight forward solution. The first step was create my components. I prefer functional components with hooks over class-based these days.
 
-I figured that my app would be tiered like so:
-
-     --List -->List Item
-
-App |
---Input
-
 The app passes down the data to the list as a prop, the input passes back the search term, which the app passes back down to the list as a prop. The list first determines if there is a search term, or if it's blank. If there's no search term, then the list simply returns the whole dataset, otherwise it runs the props.data through a filter function which checks if Search Term === props.data.item.name and returns those that are true. After that, I added the .toLowerCase() to our Search Term === props.data.item.name just to make it string insensitive.
 
 Having finished that, I began on pagination. To accomplish this, I wrote a limitedList function, which would take in the limit as a parameter (the limit has been defined as state and set as the default of 5). The limited list function then creates an empty array, and uses a while loop to push the filtered (or unfiltered) list to the empty array which gets returned and finally displayed to the user.
